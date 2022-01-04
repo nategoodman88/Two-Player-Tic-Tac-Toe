@@ -139,11 +139,14 @@ namespace TicTacToe
                 Restart();
             }
         }
+        // Asks the player if they want to play the ame again
         public void Restart()
         {
+            // Turn count reset and game set back to active status
             count = 0;
             gameGoing = true;
             DialogResult playAgain = MessageBox.Show("Would you like to play again? ", "Game Over", MessageBoxButtons.YesNo);
+            // Clears the board
             if(playAgain == DialogResult.Yes)
             { 
                 MessageBox.Show("Clearing the board and swapping players.");
@@ -157,6 +160,7 @@ namespace TicTacToe
                 button8.Text = "";
                 button9.Text = "";
             }
+            // Exists the application
             else if (playAgain == DialogResult.No)
             {
                 Application.Exit();
